@@ -4,4 +4,4 @@ LABEL vendor1="Femi Fatokun"
 RUN apt-get update
 RUN apt-get install nginx
 EXPOSE 80
-CMD ["nginx"]
+CMD ["nginx", "-g", "daemon off;"]
