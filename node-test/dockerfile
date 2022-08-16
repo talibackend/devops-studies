@@ -10,9 +10,9 @@ ENV HOSTNAME="localhost"
 
 ENV PROJECT_NAME="node-project"
 
-RUN mkdir /${PROJECT_NAME}}/
+RUN mkdir /${PROJECT_NAME}/
 
-WORKDIR /${PROJECT_NAME}}/
+WORKDIR /${PROJECT_NAME}/
 
 ADD / /
 
