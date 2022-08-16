@@ -1,0 +1,18 @@
+{
+  "name": "node-test",
+  "version": "1.0.0",
+  "description": "This is just for my docker studies",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node index"
+  },
+  "keywords": [
+    "test",
+    "docker",
+    "image",
+    "container",
+    "devops"
+  ],
+  "author": "Femi fatokun",
+  "license": "MIT"
+}

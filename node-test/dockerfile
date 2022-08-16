@@ -1,0 +1,19 @@
+FROM node:latest
+
+LABEL version="1.0.0"
+
+LABEL author="Femi Fatokun"
+
+ENV NODE_ENVIRONMENT="development"
+
+ENV HOSTNAME="localhost"
+
+ENV PROJECT_NAME="node-project"
+
+RUN mkdir /${PROJECT_NAME}}/
+
+WORKDIR /${PROJECT_NAME}}/
+
+ADD / /
+
+CMD ["npm", "run", "start"]
