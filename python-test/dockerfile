@@ -1,0 +1,13 @@
+FROM python:latest
+
+LABEL version=0.0.1
+
+LABEL author="Femi Fatokun"
+
+RUN mkdir python-programs
+
+WORKDIR /python-programs/
+
+COPY test.py test.py
+
+CMD [ "python", "test.py"]
