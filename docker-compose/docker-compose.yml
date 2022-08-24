@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+
+  mysql_db:
+    image: mysql:latest
+    volumes: 
+      - mysql_compose:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: null
+    ports:
+      - "33060:3306"
+
+  nginx_server:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    restart: always
+
+volumes:
+  mysql_compose:
