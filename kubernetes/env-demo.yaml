@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-test
+spec:
+  containers:
+    - name: mysql-test-container
+      image: mysql
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef: 
+              name: secret-test
+              key: password
+
