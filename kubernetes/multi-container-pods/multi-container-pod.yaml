@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: two-containers
+spec:
+  restartPolicy: OnFailure
+  containers:
+    - name: nginx-container
+      image: nginx
+      volumeMounts:
+        - name: shared-data
+          mountPath: /usr/share/nginx/html
+    - name: mysql-container
+      image: mysql
+      volumeMounts:
+        - name: shared-data
+          mountPath: /pod-data
+  volumes:
+    - name: shared-data
+      emptyDir: {}
