@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-test
+  labels:
+    open_to_the_world: allow
+spec:
+  containers:
+    - name: nginx-test-container
+      image: nginx:latest
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine-test
+  labels:
+    open_to_the_world: allow
+spec: 
+  containers:
+    - name: alpine-test-container
+      image: alpine:latest
+      command:
+        - sleep
+        - '3600'
