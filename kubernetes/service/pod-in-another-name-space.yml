@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: service-test
+  namespace: outside-for-service
+spec:
+  containers:
+    - name: nginx-test
+      image: nginx:latest
+      ports:
+        - protocol: TCP
+          containerPort: 80
